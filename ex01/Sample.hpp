@@ -7,7 +7,7 @@ class Sample {
 
 		int foo;
 
-		Sample ( void );
+		Sample ( char p1, int p2, float p3 );
 		~Sample ( void );
 
 		void	bar( void );

@@ -15,7 +15,7 @@
 
 int main(int ac, char **av)
 {
-    std::string str;
+//    std::string str;
     int i;
     int j;
     (void)av;
@@ -33,9 +33,10 @@ int main(int ac, char **av)
                 str[j] = (char)std::toupper(str[j]);
                 j++;
             }
-            std::cout << str << std::endl; 
+            std::cout << str; 
             i++;
         }
+		std::cout << std::endl;
     }
     else
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
