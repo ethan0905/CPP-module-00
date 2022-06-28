@@ -6,15 +6,38 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:02:12 by esafar            #+#    #+#             */
-/*   Updated: 2022/06/27 15:17:22 by esafar           ###   ########.fr       */
+/*   Updated: 2022/06/28 13:26:26 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <stdio.h>
 
 int main(int ac, char **av)
 {
-    (void)ac;
+    std::string str;
+    int i;
+    int j;
     (void)av;
-    std::cout << "Bonsoir" << std::endl;
+
+    i = 1;
+    if (ac >= 2)
+    {
+        while (av[i])
+        {
+            std::string str(av[i]);
+
+            j = 0;
+            while (j < str.size())
+            {
+                str[j] = (char)std::toupper(str[j]);
+                j++;
+            }
+            std::cout << str << std::endl; 
+            i++;
+        }
+    }
+    else
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+    return (0);
 }
