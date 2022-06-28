@@ -28,7 +28,7 @@ int main(int ac, char **av)
             std::string str(av[i]);
 
             j = 0;
-            while (j < str.size())
+            while (j < str.lenght())
             {
                 str[j] = (char)std::toupper(str[j]);
                 j++;
