@@ -12,7 +12,7 @@
 
 NAME = PhoneBook
 
-SRCS = main.cpp Contact.cpp
+SRCS = main.cpp Contact.cpp PhoneBook.cpp
 
 GCC = c++
 FLAGS = -g -Wextra -Wall -Werror -std=c++98 

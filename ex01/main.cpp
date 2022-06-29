@@ -1,4 +1,5 @@
 //#include "Sample.hpp"
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
 #include <iostream>
 #include <string>
@@ -6,8 +7,8 @@
 
 int main(int ac, char **av){
 
-	Contact instance;
 	std::string line;
+	PhoneBook	instance;
 	(void)av;
 
 	if (ac == 1)
@@ -22,7 +23,7 @@ int main(int ac, char **av){
 				break ;
 			}
 			else if (line == "add")
-				std::cout << "addContact function is loading [...]" << std::endl;
+				instance.addContactFunction();
 			else if (line == "search")
 				std::cout << "searchContact function is loading [...]" << std::endl;
 			else if (line == "exit")
