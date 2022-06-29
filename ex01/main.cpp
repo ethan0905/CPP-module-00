@@ -1,5 +1,36 @@
-#include "Sample.hpp"
+//#include "Sample.hpp"
+#include "Contact.hpp"
+#include <iostream>
+#include <string>
+#include <sstream>
 
+int main(){
+
+	Contact instance;
+	std::string line;
+
+	while (1)
+	{
+		std::getline(std::cin, line);
+		if (std::cin.eof())
+		{
+			std::cout << "^D" << std::endl;
+			break ;
+		}
+		else if (line == "ADD")
+			std::cout << "addContact function is loading [...]" << std::endl;
+		else if (line == "SEARCH")
+			std::cout << "searchContact function is loading [...]" << std::endl;
+		else if (line == "EXIT")
+			break ;
+		std::cin.clear();
+	}
+	return (0);
+}
+
+
+
+/*
 int	main(){
 
 	Sample	instance;
@@ -12,4 +43,4 @@ int	main(){
 	std::cout << "------------------" << std::endl;
 
 	return (0);
-}
+}*/

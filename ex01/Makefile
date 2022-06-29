@@ -12,7 +12,7 @@
 
 NAME = main
 
-SRCS = main.cpp Sample.cpp
+SRCS = main.cpp Contact.cpp
 
 GCC = c++
 FLAGS = -g -Wextra -Wall -Werror -std=c++98 
