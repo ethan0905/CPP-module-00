@@ -12,7 +12,8 @@ class	PhoneBook {
 		PhoneBook ( void );
 		~PhoneBook ( void );
 
-		void	addContactFunction( void );
+		void	addContactFunction( int contactNb );
+		void	displaySearchTab( int contactNb );
 	private:
 
 		Contact Contact[8];

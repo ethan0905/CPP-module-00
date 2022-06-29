@@ -1,4 +1,5 @@
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 
 PhoneBook::PhoneBook ( void ) {
 
@@ -10,7 +11,7 @@ PhoneBook::~PhoneBook ( void ) {
 	return ;
 }
 
-void	PhoneBook::addContactFunction( void ) {
+void	PhoneBook::addContactFunction( int contactNb ) {
 
 	int count = 0;
 	std::string	input;
@@ -33,7 +34,27 @@ void	PhoneBook::addContactFunction( void ) {
 			std::cerr << "Error: field can't be empty." << std::endl;
 			count--;
 		}
+		Contact[contactNb % 8].newContact( input, count );
+		std::cin.clear();
 		count++;
+	}
+	return ;
+}
+
+void	PhoneBook::displaySearchTab( int contactNb ) {
+
+	int i;
+
+	i = 0;
+	if (contactNb == 0)
+	{
+		std::cerr << "There is no contact inside your repository. Add one by using the command ADD." << std::endl;
+		return ;
+	}
+	while (i < 2)
+	{
+		Contact[i].printSearchLine(i);
+		i++;
 	}
 	return ;
 }

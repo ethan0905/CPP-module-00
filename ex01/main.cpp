@@ -12,6 +12,9 @@ int main(int ac, char **av){
 
 	if (ac == 1)
 	{
+		int contactNb;
+
+		contactNb = 0;
 		while (1)
 		{
 			std::cout << ">>> ";
@@ -22,9 +25,12 @@ int main(int ac, char **av){
 				break ;
 			}
 			else if (line == "add")
-				instance.addContactFunction();
+			{
+				instance.addContactFunction(contactNb);
+				contactNb++;
+			}
 			else if (line == "search")
-				std::cout << "searchContact function is loading [...]" << std::endl;
+				instance.displaySearchTab(contactNb);
 			else if (line == "exit")
 				break ;
 			else

@@ -1,3 +1,4 @@
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
 
 Contact::Contact( void ){
@@ -11,8 +12,27 @@ Contact::~Contact( void ){
 	std::cout << "Destructor called" << std::endl;
 	return ;
 }
+/*
+void	Contact::displaySearchTab( void ) {	
 
-void	Contact::printContact( void ) {
+	int i; 
+
+	i = 0;
+	while (i < 9)
+	{
+		std::cout << "| #" << i << "|" << _firstName;
+		i++;
+	}
+	return ;
+}*/
+
+void	Contact::printSearchLine( int i ) {
+
+	std::cout << "| #" << i << "|" << _firstName;
+	return ;
+}
+
+void	Contact::printSearchedResult( void ) {
 
 	std::cout << "_firstName : " << Contact::_firstName << std::endl;
 	std::cout << "_lastName : " << Contact::_lastName << std::endl;

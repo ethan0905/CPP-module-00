@@ -10,7 +10,9 @@ class	Contact {
 		Contact ( void );
 		~Contact ( void );
 
-		void		printContact( void );
+//		void		displaySearchTab( void );
+		void		printSearchLine( int i );
+		void		printSearchedResult( void );
 		void		newContact( std::string str, int i );
 
 	private:
