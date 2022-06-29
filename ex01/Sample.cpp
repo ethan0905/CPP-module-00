@@ -5,16 +5,6 @@
 Sample::Sample( void ) {
 
 	std::cout << "-Constructor called-" << std::endl;
-
-	this->publicFoo = 1;
-	this->_privateFoo = 2;
-	std::cout << "-------------------" << std::endl;
-	std::cout << "publicFoo : " << this->publicFoo << std::endl;
-	std::cout << "_privateFoo : " << this->_privateFoo << std::endl;
-
-	this->publicBar();
-	this->_privateBar();
-	std::cout << "-------------------" << std::endl;
 	return;
 }
 
@@ -24,15 +14,14 @@ Sample::~Sample( void ){
 	return;
 }
 
-void	Sample::publicBar( void ) const{
+int	Sample::getFoo( void ) const{
 
-	std::cout << "Public member function called" << std::endl;
-	return;
+	return this->_privateFoo;
 }
 
-void	Sample::_privateBar( void ) const{
+void	Sample::setFoo( int v ) {
 
-	std::cout << "_private member function called" << std::endl;
+	this->_privateFoo = v;
 	return;
 }
 
