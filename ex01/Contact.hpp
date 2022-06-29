@@ -11,7 +11,7 @@ class	Contact {
 		~Contact ( void );
 
 		void		printContact( void );
-		void		addContact( std::string str, int i );
+		void		newContact( std::string str, int i );
 
 	private:
 

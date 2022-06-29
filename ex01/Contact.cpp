@@ -22,7 +22,7 @@ void	Contact::printContact( void ) {
 	return ;
 }
 
-void	Contact::addContact( std::string str, int i ) {
+void	Contact::newContact( std::string str, int i ) {
 
 	if (i == 0)
 		Contact::_firstName = str;
