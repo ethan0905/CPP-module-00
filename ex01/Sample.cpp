@@ -1,28 +1,39 @@
-#include <iostream>
+//#include <iostream>
 #include "Sample.hpp"
 
 
-Sample::Sample( char p1, int p2, float p3 ) : a1(p1), a2(p2), a3(p3) {
+Sample::Sample( void ) {
 
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "-Constructor called-" << std::endl;
 
-	std::cout << "a1 : " << this->a1 << std::endl;
-	std::cout << "a2 : " << this->a2 << std::endl;
-	std::cout << "a3 : " << this->a3 << std::endl;
+	this->publicFoo = 1;
+	this->_privateFoo = 2;
+	std::cout << "-------------------" << std::endl;
+	std::cout << "publicFoo : " << this->publicFoo << std::endl;
+	std::cout << "_privateFoo : " << this->_privateFoo << std::endl;
 
-	//this->bar();
-
+	this->publicBar();
+	this->_privateBar();
+	std::cout << "-------------------" << std::endl;
 	return;
 }
 
 Sample::~Sample( void ){
 
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "-Destructor called-" << std::endl;
 	return;
 }
 
-void	Sample::bar( void ){
+void	Sample::publicBar( void ) const{
 
-	std::cout << "Member function called" << std::endl;
+	std::cout << "Public member function called" << std::endl;
 	return;
 }
+
+void	Sample::_privateBar( void ) const{
+
+	std::cout << "_private member function called" << std::endl;
+	return;
+}
+
+

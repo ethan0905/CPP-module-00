@@ -1,16 +1,25 @@
 #ifndef SAMPLE_H
 # define SAMPLE_H
 
+#include <iostream>
+
 class Sample {
 
 	public:
 
-		int foo;
+		int publicFoo;
 
-		Sample ( char p1, int p2, float p3 );
+		Sample ( void );
 		~Sample ( void );
 
-		void	bar( void );
+		void	publicBar( void ) const;
+
+	private:
+	
+		int _privateFoo;
+
+		void	_privateBar( void ) const;
+		
 };
 
 #endif
