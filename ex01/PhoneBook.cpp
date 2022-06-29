@@ -28,7 +28,11 @@ void	PhoneBook::addContactFunction( void ) {
 		else if (count == 4)
 			std::cout << "darkestSecret : ";
 		std::getline(std::cin, input);
-
+		if (input == "")
+		{
+			std::cerr << "Error: field can't be empty." << std::endl;
+			count--;
+		}
 		count++;
 	}
 	return ;
