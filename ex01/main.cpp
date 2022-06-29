@@ -20,33 +20,18 @@ int main(int ac, char **av){
 				std::cout << "^D" << std::endl;
 				break ;
 			}
-			else if (line == "ADD")
+			else if (line == "add")
 				std::cout << "addContact function is loading [...]" << std::endl;
-			else if (line == "SEARCH")
+			else if (line == "search")
 				std::cout << "searchContact function is loading [...]" << std::endl;
-			else if (line == "EXIT")
+			else if (line == "exit")
 				break ;
+			else
+				std::cerr << "Error: bad input." << std::endl;
 			std::cin.clear();
 		}
 	}
 	else
-		std::cout << "error: wrong number of arguments." << std::endl;
+		std::cerr << "Error: wrong number of arguments." << std::endl;
 	return (0);
 }
-
-
-
-/*
-int	main(){
-
-	Sample	instance;
-
-	std::cout << "--------MAIN-------" << std::endl;
-	instance.setFoo( 42 );
-	std::cout << "_privateFoo : " << instance.getFoo() << std::endl;
-	instance.setFoo( -21 );
-	std::cout << "_privateFoo : " << instance.getFoo() << std::endl;
-	std::cout << "------------------" << std::endl;
-
-	return (0);
-}*/
