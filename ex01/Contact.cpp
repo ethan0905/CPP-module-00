@@ -28,7 +28,7 @@ void	Contact::displaySearchTab( void ) {
 
 void	Contact::printSearchLine( int i ) {
 
-	std::cout << "| #" << i << "|" << _firstName;
+	std::cout << "| #" << i << " | " << _firstName << " | " << _lastName << " | " << _nickName << std::endl;
 	return ;
 }
 

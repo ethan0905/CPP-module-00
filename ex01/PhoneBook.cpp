@@ -51,7 +51,7 @@ void	PhoneBook::displaySearchTab( int contactNb ) {
 		std::cerr << "There is no contact inside your repository. Add one by using the command ADD." << std::endl;
 		return ;
 	}
-	while (i < 2)
+	while (i < contactNb)
 	{
 		Contact[i].printSearchLine(i);
 		i++;
