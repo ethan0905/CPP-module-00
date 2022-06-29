@@ -14,6 +14,7 @@ int main(int ac, char **av){
 	{
 		while (1)
 		{
+			std::cout << ">>> ";
 			std::getline(std::cin, line);
 			if (std::cin.eof())
 			{
