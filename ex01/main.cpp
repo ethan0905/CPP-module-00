@@ -7,8 +7,7 @@ int	main(){
 	std::cout << "--------MAIN-------" << std::endl;
 	instance.setFoo( 42 );
 	std::cout << "_privateFoo : " << instance.getFoo() << std::endl;
-
-	instance.setFoo( 21 );
+	instance.setFoo( -21 );
 	std::cout << "_privateFoo : " << instance.getFoo() << std::endl;
 	std::cout << "------------------" << std::endl;
 
