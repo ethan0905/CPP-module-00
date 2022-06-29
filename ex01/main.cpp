@@ -4,27 +4,33 @@
 #include <string>
 #include <sstream>
 
-int main(){
+int main(int ac, char **av){
 
 	Contact instance;
 	std::string line;
+	(void)av;
 
-	while (1)
+	if (ac == 1)
 	{
-		std::getline(std::cin, line);
-		if (std::cin.eof())
+		while (1)
 		{
-			std::cout << "^D" << std::endl;
-			break ;
+			std::getline(std::cin, line);
+			if (std::cin.eof())
+			{
+				std::cout << "^D" << std::endl;
+				break ;
+			}
+			else if (line == "ADD")
+				std::cout << "addContact function is loading [...]" << std::endl;
+			else if (line == "SEARCH")
+				std::cout << "searchContact function is loading [...]" << std::endl;
+			else if (line == "EXIT")
+				break ;
+			std::cin.clear();
 		}
-		else if (line == "ADD")
-			std::cout << "addContact function is loading [...]" << std::endl;
-		else if (line == "SEARCH")
-			std::cout << "searchContact function is loading [...]" << std::endl;
-		else if (line == "EXIT")
-			break ;
-		std::cin.clear();
 	}
+	else
+		std::cout << "error: wrong number of arguments." << std::endl;
 	return (0);
 }
 
