@@ -1,5 +1,6 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
+#include <stdlib.h>
 
 PhoneBook::PhoneBook ( void ) {
 
@@ -44,6 +45,8 @@ void	PhoneBook::addContactFunction( int contactNb ) {
 void	PhoneBook::displaySearchTab( int contactNb ) {
 
 	int i;
+	int	number;
+	std::string input;
 
 	i = 0;
 	if (contactNb == 0)
@@ -53,5 +56,14 @@ void	PhoneBook::displaySearchTab( int contactNb ) {
 	}
 	for(int i = 0; i <= 7 && i < contactNb; i++)
 		Contact[i].printSearchLine(i);
+	std::cout << "Enter a number to access a specific contact > ";
+
+	std::getline(std::cin, input);
+	number = atoi(input.c_str());
+
+	if (number > 0 && number < 9 && number <= contactNb)
+		Contact[number - 1].printSearchedResult();
+	else
+		std::cerr << "Error: invalid input." << std::endl;
 	return ;
 }
