@@ -5,28 +5,13 @@
 
 Contact::Contact( void ){
 
-	std::cout << "Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact( void ){
 
-	std::cout << "Destructor called" << std::endl;
 	return ;
 }
-/*
-void	Contact::displaySearchTab( void ) {	
-
-	int i; 
-
-	i = 0;
-	while (i < 9)
-	{
-		std::cout << "| #" << i << "|" << _firstName;
-		i++;
-	}
-	return ;
-}*/
 
 void	Contact::printSearchLine( int i ) {
 

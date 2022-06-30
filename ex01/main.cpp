@@ -19,12 +19,7 @@ int main(int ac, char **av){
 		{
 			std::cout << ">>> ";
 			std::getline(std::cin, line);
-			if (std::cin.eof())
-			{
-				std::cout << "^D" << std::endl;
-				break ;
-			}
-			else if (line == "add")
+			if (line == "add")
 			{
 				instance.addContactFunction(contactNb);
 				contactNb++;
@@ -35,6 +30,11 @@ int main(int ac, char **av){
 				break ;
 			else
 				std::cerr << "Error: bad input." << std::endl;
+			if (std::cin.eof())
+			{
+				std::cout << "^D" << std::endl;
+				break ;
+			}
 			std::cin.clear();
 		}
 	}

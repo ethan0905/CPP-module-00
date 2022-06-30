@@ -12,6 +12,8 @@ class	PhoneBook {
 		PhoneBook ( void );
 		~PhoneBook ( void );
 
+		bool	isDigit( std::string input );
+
 		void	addContactFunction( int contactNb );
 		void	displaySearchTab( int contactNb );
 	private:

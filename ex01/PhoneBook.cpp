@@ -12,6 +12,16 @@ PhoneBook::~PhoneBook ( void ) {
 	return ;
 }
 
+bool	PhoneBook::isDigit ( std::string input) {
+
+	for (int i = 0; i < input.size(); i++)
+	{
+		if (input[i] < '0' || input[i] > '9')
+			return true;
+	}
+	return false;
+}
+
 void	PhoneBook::addContactFunction( int contactNb ) {
 
 	int count = 0;
@@ -30,9 +40,19 @@ void	PhoneBook::addContactFunction( int contactNb ) {
 		else if (count == 4)
 			std::cout << "darkestSecret : ";
 		std::getline(std::cin, input);
+		if (std::cin.eof())
+		{
+			std::cout << "^D" << std::endl;
+			return ;
+		}
 		if (input == "")
 		{
 			std::cerr << "Error: field can't be empty." << std::endl;
+			count--;
+		}
+		if (count == 3 && isDigit(input))
+		{
+			std::cerr << "Error: enter a valid number." << std::endl;
 			count--;
 		}
 		Contact[contactNb % 8].newContact( input, count );
@@ -59,7 +79,13 @@ void	PhoneBook::displaySearchTab( int contactNb ) {
 	std::cout << "Enter a number to access a specific contact > ";
 
 	std::getline(std::cin, input);
+	if (std::cin.eof())
+	{
+		std::cout << "^D" << std::endl;
+		return ;
+	}
 	number = atoi(input.c_str());
+	std::cin.clear();
 
 	if (number > 0 && number < 9 && number <= contactNb)
 		Contact[number - 1].printSearchedResult();
