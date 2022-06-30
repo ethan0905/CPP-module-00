@@ -32,11 +32,10 @@ void	Contact::printSearchLine( int i ) {
 
 	int x;
 
-	std::cout << "| #" << i << std::setw(9) << " | ";
+	std::cout << "| #" << i << std::setw(11) << " | ";
 
 	for (x = 0; x < 9 && x < _firstName.size(); x++)
 		std::cout << _firstName[x];
-	//if (_firstName[9])
 	if (x == 9 && _firstName.size() > 9)
 		std::cout << ".";
 	else
