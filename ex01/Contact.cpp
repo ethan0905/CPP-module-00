@@ -1,5 +1,7 @@
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
+#include <sstream>
+#include <iomanip>
 
 Contact::Contact( void ){
 
@@ -28,7 +30,35 @@ void	Contact::displaySearchTab( void ) {
 
 void	Contact::printSearchLine( int i ) {
 
-	std::cout << "| #" << i << " | " << _firstName << " | " << _lastName << " | " << _nickName << std::endl;
+	int x;
+
+	std::cout << "| #" << i << std::setw(9) << " | ";
+
+	for (x = 0; x < 9 && x < _firstName.size(); x++)
+		std::cout << _firstName[x];
+	//if (_firstName[9])
+	if (x == 9 && _firstName.size() > 9)
+		std::cout << ".";
+	else
+		std::cout << std::setw(10 - x + 3);
+	std::cout << " | ";
+
+	for (x = 0; x < 9 && x < _lastName.size(); x++)
+		std::cout << _lastName[x];
+	if (x == 9 && _lastName.size() > 9)
+		std::cout << ".";
+	else
+		std::cout << std::setw(10 - x + 3);
+	std::cout << " | ";
+
+	for (x = 0; x < 9 && x < _nickName.size(); x++)
+		std::cout << _nickName[x];
+	if (x == 9 && _nickName.size() > 9)
+		std::cout << ".";
+	else
+		std::cout << std::setw(10 - x + 3);
+	std::cout << " | " << std::endl;
+
 	return ;
 }
 
