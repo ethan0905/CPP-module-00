@@ -14,7 +14,7 @@ PhoneBook::~PhoneBook ( void ) {
 
 bool	PhoneBook::isDigit ( std::string input) {
 
-	for (int i = 0; i < input.size(); i++)
+	for (int i = 0; i < (int)input.size(); i++)
 	{
 		if (input[i] < '0' || input[i] > '9')
 			return true;

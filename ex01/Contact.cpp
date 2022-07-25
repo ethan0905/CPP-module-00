@@ -19,25 +19,25 @@ void	Contact::printSearchLine( int i ) {
 
 	std::cout << "| #" << i + 1 << std::setw(11) << " | ";
 
-	for (x = 0; x < 9 && x < _firstName.size(); x++)
+	for (x = 0; x < 9 && x < (int)_firstName.size(); x++)
 		std::cout << _firstName[x];
-	if (x == 9 && _firstName.size() > 9)
+	if (x == 9 && (int)_firstName.size() > 9)
 		std::cout << ".";
 	else
 		std::cout << std::setw(10 - x + 3);
 	std::cout << " | ";
 
-	for (x = 0; x < 9 && x < _lastName.size(); x++)
+	for (x = 0; x < 9 && x < (int)_lastName.size(); x++)
 		std::cout << _lastName[x];
-	if (x == 9 && _lastName.size() > 9)
+	if (x == 9 && (int)_lastName.size() > 9)
 		std::cout << ".";
 	else
 		std::cout << std::setw(10 - x + 3);
 	std::cout << " | ";
 
-	for (x = 0; x < 9 && x < _nickName.size(); x++)
+	for (x = 0; x < 9 && x < (int)_nickName.size(); x++)
 		std::cout << _nickName[x];
-	if (x == 9 && _nickName.size() > 9)
+	if (x == 9 && (int)_nickName.size() > 9)
 		std::cout << ".";
 	else
 		std::cout << std::setw(10 - x + 3);
