@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 15:02:12 by esafar            #+#    #+#             */
-/*   Updated: 2022/06/28 13:26:26 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 15:43:09 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 int main(int ac, char **av)
 {
-//    std::string str;
     int i;
     int j;
-    (void)av;
 
     i = 1;
     if (ac >= 2)
@@ -28,7 +26,7 @@ int main(int ac, char **av)
             std::string str(av[i]);
 
             j = 0;
-            while (j < str.lenght())
+            while (j < (int)str.length())
             {
                 str[j] = (char)std::toupper(str[j]);
                 j++;

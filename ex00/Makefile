@@ -6,7 +6,7 @@
 #    By: esafar <esafar@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 14:59:45 by esafar            #+#    #+#              #
-#    Updated: 2022/06/27 15:17:01 by esafar           ###   ########.fr        #
+#    Updated: 2022/07/25 15:41:18 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ fclean:
 
 re:	fclean all
 
-%.o: %.c ${INCL}
+%.o: %.cpp ${INCL}
 	${GCC} ${FLAGS} -c $< -o ${<:.cpp=.o}
 
 .PHONY: all clean fclean re
