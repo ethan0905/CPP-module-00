@@ -55,7 +55,7 @@ void	PhoneBook::addContactFunction( int contactNb ) {
 			std::cerr << "Error: enter a valid number." << std::endl;
 			count--;
 		}
-		Contact[contactNb % 8].newContact( input, count );
+		contact[contactNb % 8].newContact( input, count );
 		std::cin.clear();
 		count++;
 	}
@@ -75,7 +75,7 @@ void	PhoneBook::displaySearchTab( int contactNb ) {
 		return ;
 	}
 	for(int i = 0; i <= 7 && i < contactNb; i++)
-		Contact[i].printSearchLine(i);
+		contact[i].printSearchLine(i);
 	std::cout << "Enter a number to access a specific contact > ";
 
 	std::getline(std::cin, input);
@@ -88,7 +88,7 @@ void	PhoneBook::displaySearchTab( int contactNb ) {
 	std::cin.clear();
 
 	if (number > 0 && number < 9 && number <= contactNb)
-		Contact[number - 1].printSearchedResult();
+		contact[number - 1].printSearchedResult();
 	else
 		std::cerr << "Error: invalid input." << std::endl;
 	return ;

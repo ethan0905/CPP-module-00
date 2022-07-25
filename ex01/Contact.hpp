@@ -24,4 +24,10 @@ class	Contact {
 		std::string _darkestSecret;
 };
 
+typedef struct s_data {
+
+	int i;
+	char *str;
+}	t_data;
+
 #endif

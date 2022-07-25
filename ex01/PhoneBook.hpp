@@ -18,7 +18,7 @@ class	PhoneBook {
 		void	displaySearchTab( int contactNb );
 	private:
 
-		Contact Contact[8];
+		Contact contact[8];
 };
 
 
