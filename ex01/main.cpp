@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:46:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/27 15:48:28 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/27 16:00:11 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int ac, char **av){
 		{
 			std::cout << ">>> ";
 			std::getline(std::cin, line);
-			if (line == "add")
+			if (line == "ADD")
 			{
 				if (contactNb < INT_MAX)
 				{
@@ -42,7 +42,7 @@ int main(int ac, char **av){
 				else
 					std::cerr << contactNb << "Error: reached limits of possible contacts storage." << std::endl;					
 			}
-			else if (line == "se")
+			else if (line == "SEARCH")
 				instance.displaySearchTab(contactNb);
 			else if (line == "EXIT")
 				break ;
