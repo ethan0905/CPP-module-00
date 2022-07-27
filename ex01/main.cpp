@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:46:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 19:46:02 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/27 14:59:34 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <bits/stdc++.h> //for INT_MIN/MAX
 
 int main(int ac, char **av){
 
@@ -33,12 +34,17 @@ int main(int ac, char **av){
 			std::getline(std::cin, line);
 			if (line == "add")
 			{
-				instance.addContactFunction(contactNb);
-				contactNb++;
+				if (contactNb < INT_MAX)
+				{
+					instance.addContactFunction(contactNb);
+					contactNb++;
+				}
+				else
+					std::cerr << contactNb << "Error: reached limits of possible contacts storage." << std::endl;					
 			}
-			else if (line == "search")
+			else if (line == "se")
 				instance.displaySearchTab(contactNb);
-			else if (line == "exit")
+			else if (line == "ex")
 				break ;
 			else
 				std::cerr << "Error: bad input." << std::endl;
