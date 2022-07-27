@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:45:53 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 19:45:55 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/27 15:55:57 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,39 @@ void	Contact::printSearchLine( int i ) {
 
 	int x;
 
-	std::cout << "| #" << i + 1 << std::setw(11) << " | ";
-
-	for (x = 0; x < 9 && x < (int)_firstName.size(); x++)
-		std::cout << _firstName[x];
-	if (x == 9 && (int)_firstName.size() > 9)
-		std::cout << ".";
-	else
-		std::cout << std::setw(10 - x + 3);
+	std::cout << "| " << std::setw(9) << "#" << i + 1 << " | ";
+	
+	std::cout << std::setw(10 - (int)_firstName.size() + 1);
+	for (x = 0; x < 10 && x < (int)_firstName.size(); x++)
+	{
+		if (x == 9 && (int)_firstName.size() > 9 && (int)_firstName.size() != 10)
+			std::cout << ".";
+		else	
+			std::cout << _firstName[x];
+	}
 	std::cout << " | ";
 
-	for (x = 0; x < 9 && x < (int)_lastName.size(); x++)
-		std::cout << _lastName[x];
-	if (x == 9 && (int)_lastName.size() > 9)
-		std::cout << ".";
-	else
-		std::cout << std::setw(10 - x + 3);
+	std::cout << std::setw(10 - (int)_lastName.size() + 1);
+	for (x = 0; x < 10 && x < (int)_lastName.size(); x++)
+	{
+		if (x == 9 && (int)_lastName.size() > 9 && (int)_lastName.size() != 10)
+			std::cout << ".";
+		else	
+			std::cout << _lastName[x];
+	}
 	std::cout << " | ";
 
-	for (x = 0; x < 9 && x < (int)_nickName.size(); x++)
-		std::cout << _nickName[x];
-	if (x == 9 && (int)_nickName.size() > 9)
-		std::cout << ".";
-	else
-		std::cout << std::setw(10 - x + 3);
-	std::cout << " | " << std::endl;
+		std::cout << std::setw(10 - (int)_nickName.size() + 1);
+	for (x = 0; x < 10 && x < (int)_nickName.size(); x++)
+	{
+		if (x == 9 && (int)_nickName.size() > 9 && (int)_nickName.size() != 10)
+			std::cout << ".";
+		else	
+			std::cout << _nickName[x];
+	}
+	std::cout << " | ";
 
+	std::cout << std::endl;
 	return ;
 }
 

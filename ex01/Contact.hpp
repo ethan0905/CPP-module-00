@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:45:58 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 19:45:59 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/27 15:26:31 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class	Contact {
 		Contact ( void );
 		~Contact ( void );
 
-//		void		displaySearchTab( void );
 		void		printSearchLine( int i );
 		void		printSearchedResult( void );
 		void		newContact( std::string str, int i );

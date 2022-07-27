@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 19:46:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/27 14:59:34 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/27 15:48:28 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main(int ac, char **av){
 			}
 			else if (line == "se")
 				instance.displaySearchTab(contactNb);
-			else if (line == "ex")
+			else if (line == "EXIT")
 				break ;
 			else
 				std::cerr << "Error: bad input." << std::endl;
